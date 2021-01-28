@@ -10,10 +10,17 @@ yarn add react-router-dom
 ## What do I import?
 
 ```js
-
+import { 
+  Router,
+  Link,
+  Switch,
+  Route
+} from 'react-router-dom';
 ```
 
 ## How do I create "pages" with react router?
+
+Create some components, for example:
 
 - Home
 - About
