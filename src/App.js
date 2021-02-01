@@ -1,6 +1,6 @@
 import Home from './components/Home';
-import Stuff from './components/Stuff';
-import About from './components/About';
+import Picture from './components/Picture';
+
 
 import axios from 'axios'
 import {useState, useEffect} from 'react'
@@ -24,8 +24,12 @@ function App() {
   }
   async function getNaranjo(){
     const resp = await axios.get(`/api/naranjo`);
-    // console.log(resp)
+    //console.log(resp)
     setData(resp.data)
+  }
+  async function getPic() {
+    const resp = await axios.get('/api/picture')
+    setRiver(resp.river)
   }
   
 
@@ -44,14 +48,16 @@ function App() {
             getRocja = {getRocja}
             getNaranjo = {getNaranjo}
             />
-            
+            <Picture 
+              image ={data.image}
+             // getPic = {getPic}
+              
+            />
           </Route>
           <Route path="/stuff" exact>
-            <Stuff />
+            
           </Route>
-          <Route path="/about" exact>
-        <About />
-        </Route>
+         
 
         </Switch>
     </div>

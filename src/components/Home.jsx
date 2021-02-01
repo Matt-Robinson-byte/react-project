@@ -6,7 +6,8 @@ import Graph from './Graph'
 function Home(props) {
     
     return (
-      <div>
+      <div className = 'graph'>
+        
         
         <Graph
             data = {props.data}
