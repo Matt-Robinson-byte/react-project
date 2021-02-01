@@ -38,7 +38,7 @@ const state = {
   }
  
   return (
-    <div >
+    <div className="graph">
       <h1>hello world</h1>
     <Line
       data={state}
